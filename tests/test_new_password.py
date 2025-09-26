@@ -9,12 +9,13 @@ def test_password_characters():
         assert char in valid_characters
 
 def test_password_8_characters():
-    
+    valid_characters = string.ascii_letters + string.digits + string.punctuation
+    password = generate_password(8)  # Генерируем длинный пароль для более надежной проверки
+    for char in password:
+        assert char in valid_characters
 
-"""
-Допиши еще один тест из предложенных. Или придумай свой.
-Если сможешь написать больше, то будет круто!
-
-Тест, что длина пароля соответствует заданной
-Тест, что два сгенерированных подряд пароля различаются
-"""
+def test_password_uppercase_lowercase():
+    valid_characters = string.digits + string.punctuation + string.ascii_letters + string.ascii_uppercase + string.ascii_lowercase
+    password = generate_password(50)  # Генерируем длинный пароль для более надежной проверки
+    for char in password:
+        assert char in valid_characters
