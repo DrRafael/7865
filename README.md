@@ -27,3 +27,5 @@ pytest
 ## Автор
 
 Kodland
+Mihael
+and company
