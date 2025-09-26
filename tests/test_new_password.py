@@ -8,6 +8,14 @@ def test_password_characters():
     for char in password:
         assert char in valid_characters
 
+def test_password_len():
+    assert len(generate_password()) == 12
+
+def test_password_pass():
+    generate_password = generate_password(23)
+    generate_password2 = generate_password(12)
+    assert generate_password != generate_password2
+
 """
 Допиши еще один тест из предложенных. Или придумай свой.
 Если сможешь написать больше, то будет круто!
